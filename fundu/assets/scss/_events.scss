@@ -1,0 +1,682 @@
+.events-bg{
+    padding: 50px;
+    @media #{$xs}{
+        padding: 20px;
+    }
+}
+.events-date{
+    background: $theme-color;
+    width: 160px;
+    height: 160px;
+    line-height: 225px;
+    @media #{$xs,$sm}{
+        float: none;
+        margin-bottom: 25px;
+    }
+    & h2{
+        color:$white;
+        font-size: 60px;
+        font-weight: 700;
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        & span{
+            display: block;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-top: 10px;
+        }
+    }
+}
+.events-text{
+    & span{
+        display: block;
+        margin-bottom: 10px;
+    }
+    & h2{
+        font-size: 36px;
+        margin-bottom: 20px;
+        @media #{$xs}{
+            font-size: 25px;
+        }
+    }
+}
+.events-top{
+    display: flex;
+    justify-content: space-between;
+    & h4{
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    & .events-list{
+        position: relative;
+        & .select {
+            background: none;
+            padding: 10px 35px;
+            border: 1px solid $hr-border-color;
+            border-radius: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: $pg-color;
+            font-family: $opensans;
+            appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+        }
+        &::before {
+            content: "\f107";
+            font-family: "Font Awesome 5 Pro";
+            position: absolute;
+            right: 18px;
+            top: 10px;
+        }
+    }
+}
+.events-data{
+    @media #{$xs} {
+        display: block;
+    }
+    display: flex;
+    align-items: center;
+}
+.events-date-two{
+    @media #{$xs} {
+        margin-bottom: 20px;
+    }
+    background: #f8f8f8;
+    width: 90px;
+    height: 90px;
+    line-height: 135px;
+    border-radius: 6px;
+    & h5{
+        color: $pg-color;
+        font-size: 40px;
+        font-weight: 500;
+        display: inline-block;
+        text-transform: uppercase;
+        line-height: 1;
+        margin: 0;
+        & span{
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+    }
+}
+.events-content{
+    @media #{$md,$sm,$xs} {
+        margin:  0 0;
+    }
+    padding: 40px;
+    margin:  0 30px;
+    box-shadow: 0px 8px 16px 0px rgba(133, 133, 133, 0.1);
+    background: $white;
+    margin-top: -90px;
+    position: relative;
+}
+.events-text-two{
+    & span{
+        font-size: 14px;
+        text-transform: uppercase;
+        display: block;
+        color: $theme-color;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+        font-weight: 700;
+    }
+    & h5{
+        @media #{$xs} {
+            font-size: 20px;
+        }
+        font-size: 30px;
+        line-height: 1.3;
+        margin-bottom: 0;
+    }
+}
+.events-meta{
+    & a{
+        font-size: 14px;
+        color: $pg-color;
+        margin-right: 40px;
+        margin-bottom: 15px;
+        font-family: $opensans;
+        display: inline-block;
+        transition: .3s;
+        & i{
+            margin-right: 10px;
+        }
+        &:hover{
+            color: $theme-color;
+        }
+    }
+}
+.events_button{
+    display: flex;
+    @media #{$md,$sm,$xs} {
+        display: block;
+    }
+}
+.event_button1{
+    @media #{$md,$sm,$xs} {
+        margin-bottom: 20px;
+    }
+}
+.events-calendar{
+    
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td {
+	padding: 0;
+}
+
+.calendar-container {
+	position: relative;
+}
+
+.month-year{
+    & h6  {
+        font-size: 14px;
+        font-weight: 500;
+        color: $pg-color;
+        position: relative;
+        text-transform: capitalize;
+        top: 15px;
+    }
+}
+
+.calendar {
+    @media #{$xs} {
+        padding: 35px 10px
+    }
+	background: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(179, 179, 179, 0.2);
+	color: $pg-color;
+	display: inline-block;
+	padding: 35px 40px
+}
+
+.calendar thead {
+	color: $heading-color;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.calendar td {
+	height: 40px;
+    width: 40px;
+	text-align: center;
+    font-weight: 600;
+    font-family:$opensans;
+    transition: .5s;
+}
+
+.calendar tbody td:hover {
+    background: #f2f2f2;
+    color: #dedede;
+    border-radius: 50%;
+}
+.calendar tbody .current-day:hover{
+    background: $theme-color;
+    color: $white;
+    border-radius: 50%;
+}
+.calendar tbody .holi-day:hover{
+    background: #00cf70;
+	color: $white;
+    border-radius: 50%;
+}
+
+.current-day {
+    background: $theme-color;
+	color: $white;
+    border-radius: 50%;
+}
+
+.holi-day{
+    background: #00cf70;
+	color: $white;
+    border-radius: 50%;
+}
+
+.prev-month,
+.next-month {
+	color: #cacaca;
+}
+}
+.calendar-slider{
+    & .owl-nav {
+        & div {
+            height: 40px;
+            width: 40px;
+            background: #f4f4f4;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            transition: .3s;
+            &:hover{
+                background: $theme-color;
+                color: $white;
+            }
+        }
+        & .owl-next {
+            @media #{$lg} {
+                right: 80px;
+            }
+            @media only screen and (min-width: 320px) and (max-width: 419px){
+                right: 50px;
+            }
+            right: 100px;
+        }
+        & .owl-prev {
+            @media #{$lg} {
+                left: 80px;
+            }
+            @media only screen and (min-width: 320px) and (max-width: 425px){
+                left: 50px;
+            }
+            left: 100px;
+        }
+    }
+}
+.event-information{
+    @media #{$lg} {
+        margin: 0 0;
+        padding: 20px;
+    }
+    @media #{$sm,$xs} {
+        margin: 0 0;
+        margin-top: 0;
+        padding: 40px 15px;
+    }
+    margin: 0 30px;
+    margin-top: -90px;
+    box-shadow: 0px 8px 16px 0px rgba(133, 133, 133, 0.1);
+    background: $white;
+    position: relative;
+    padding: 40px;
+    border-radius: 6px;
+    position: relative;
+}
+.events-description{
+    & span{
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $theme-color;
+        font-family: $opensans;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    & h5{
+        font-size: 30px;
+        line-height: 1.2;
+        font-family: $merri;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+}
+.events-sm-mete{
+    & ul{
+        & li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            & h6{
+                @media #{$lg} {
+                    width: 45%;
+                }
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: #4d4b65;
+                width: 50%;
+                margin-bottom: 0;
+            }
+            & p{
+                @media #{$lg} {
+                    width: 55%;
+                }
+                font-size: 13px;
+                color: $pg-color;
+                width: 50%;
+                margin-bottom: 0;
+                font-weight: 600;
+            }
+        }
+    }
+}
+.event_text{
+    @media #{$md,$sm,$xs} {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+    padding-left: 20px;
+}
+.events-icon{
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+}
+.sm-eve-info{
+    @media #{$md} {
+        padding: 35px 25px;
+    }
+    padding: 35px 30px;
+    box-shadow: 0px 8px 16px 0px rgba(157, 157, 157, 0.1);
+    background: $white;
+    & h6{
+        @media #{$md,$xs}{
+            font-size: 18px;
+        }
+        font-size: 20px;
+        line-height: 1.3;
+        font-family: $merri;
+        margin-bottom: 15px;
+    }
+    & p{
+        margin-bottom: 0;
+    }
+}
+.sm-eve-info-2{
+    padding-top: 65px;
+    padding-bottom: 25px;
+    & h6{
+        font-family: $poppins;
+    }
+}
+.causes-meta{
+    @media #{$sm} {
+        padding: 20px 10px;
+    }
+    @media #{$xs} {
+        padding: 20px 20px;
+    }
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #fff;
+    border: 2px solid #e7e7e8;
+    text-align: center;
+    & .m-item{
+        & p{
+            @media #{$sm} {
+                font-size: 14px;
+            }
+            @media #{$xs} {
+                font-size: 16px;
+            }
+            font-size: 20px;
+            color: $heading-color;
+            margin-bottom: 10px;
+        }
+        & span{
+            font-size: 12px;
+            font-weight: 600;
+            color: $theme-color;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+    }
+}
+.sd-single-eve{
+    @media #{$xs}{
+        padding: 20px  20px;
+        // height: auto;
+    }
+    @media #{$sm}{
+        height: 485px;
+    }
+    height: 516px;
+    padding: 55px 55px;
+    box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.06);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .event_up-bg{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        & img{
+            height: 516px;
+        }
+    }
+    & .sd_date{
+        text-transform: uppercase;
+        color: $theme-color;
+        font-weight: 700;
+        letter-spacing: 2px;
+        font-size: 14px;
+        display: block;
+    }
+    & h4{
+        @media #{$lg,$sm} {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        @media #{$xs} {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        font-size: 32px;
+        line-height: 1.3;
+        margin-bottom: 20px;
+    }
+}
+.sm-events-item {
+    position: relative;
+}
+.top_date-eve{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    background: $theme-color;
+    color: $white;
+    text-align: center;
+    & span{
+        position: relative;
+        top: 16px;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        display: block;
+    }
+}
+.prayer_area{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+//progress
+.progress-circular {
+    @media #{$lg} {
+        top: 28%;
+    }
+    @media #{$sm} {
+        top: 22%;
+    }
+    @media #{$xs} {
+        top: 30%;
+    }
+    position: absolute;
+    top: 37%;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+.progress-circular canvas {
+    background: #ffffff;
+    border-radius: 50%;
+}
+.knob {
+    font-size: 16px !important;
+    font-weight: 600;
+    color: $heading-color !important;
+    font-family: $opensans !important;
+}
+//causes-details
+.causes-top-meta{
+    @media #{$sm} {
+        margin: 35px 25px;
+    }
+    @media #{$xs} {
+        display: block;
+        text-align: center;
+    }
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 60px;
+    border-bottom: 2px solid #f2edff;
+    padding-bottom: 40px;
+    align-items: center;
+    & .causes-progress-circular {
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+    }
+    & .m-item{
+        @media #{$xs} {
+            margin-bottom: 20px;
+        }
+        & h5{
+            font-size: 30px;
+            font-weight: 400;
+            font-family: $opensans;
+        }
+        & .causes-name{
+            font-weight: bold;
+            color: $theme-color;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+    }
+}
+.causes-details-info{
+    @media #{$sm} {
+        padding: 0 25px;
+    }
+    @media #{$xs} {
+        padding: 0 20px;
+    }
+    padding: 0 50px;
+    padding-bottom: 60px;
+}
+.causes-dtitle{
+    @media #{$sm,$md} {
+        font-size: 25px;
+    }
+    @media #{$xs} {
+        font-size: 20px;
+    }
+    font-size: 28px;
+    line-height: 1.2;
+}
+.causes-table{
+    @media #{$md,$sm,$xs} {
+        width: 600px;
+    }
+    text-align: initial;
+    & th{
+        font-size: 14px;
+        line-height: 1.2;
+        color: #b6b5c6;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    &  :not(caption) > * > * {
+        padding: 20px 0;
+        border-bottom: 1px solid #f2edff;
+    }
+    &  :not(:last-child) > :last-child > * {
+        border-bottom: 1px solid #f2edff;
+    }
+    & td{
+        font-size: 14px;
+        color: $pg-color;
+    }
+    & .ammount{
+        color: $theme-color;
+        font-weight: bold;
+    }
+
+    & tr:last-child{
+        border-bottom: 0;
+    }
+}
+.donar-more{
+    border-bottom: 1px solid #f2edff;
+    position: relative;
+    & .donar-button{
+        position: absolute;
+        top: 15px;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+}
+//causes owl nav
+.causes-slider{
+    .owl-carousel .owl-item img {
+        width: 100%;
+    }
+    & .owl-nav {
+        & div {
+            @media #{$xl,$lg,$md} {
+                top: 40%;
+            }
+            @media #{$xs} {
+                display: none;
+            }
+            height: 60px;
+            width: 60px;
+            background: $white;
+            color: #dadada;
+            line-height: 60px;
+            text-align: center;
+            border-radius: 50%;
+            position: absolute;
+            font-size: 30px;
+            top: 45%;
+            transition: .3s;
+            &:hover{
+                background: $theme-color;
+                color: $white;
+            }
+        }
+        & .owl-next {
+            @media #{$xl,$lg,$md,$sm} {
+                right: -40px;
+            }
+            right: -80px;
+        }
+        & .owl-prev {
+            @media #{$xl,$lg,$md,$sm} {
+                left: -40px;
+            }
+            left: -80px;
+        }
+    }
+}

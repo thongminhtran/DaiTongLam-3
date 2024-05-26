@@ -1,0 +1,98 @@
+/*----------------------------------------*/
+/*  14. Footer CSS
+/*----------------------------------------*/
+
+.footer-title {
+  color: $white;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.footer-widget{
+    & p {
+        @media only screen and (min-width: 420px) and (max-width: 590px) {
+            padding-right: 80px;
+        }
+        color: $footer-text;
+        padding-right: 30px;
+    }
+    & ul {
+        li {
+            margin-bottom: 24px;
+            line-height: 1;
+            & a {
+                color: $footer-text;
+                transition: .3s;
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+    }
+}
+.single-footer-post {
+    margin-bottom: 25px;
+    & h4 {
+        color: $footer-text;
+        font-size: 18px;
+        line-height: 1.4;
+    }
+    & span {
+        color: $theme-color;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 14px;
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+.copyright{
+    & p{
+        color: $footer-text;
+        & a{
+            color: $theme-color;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+    }
+}
+.footer-line img {
+    width: 100%;
+}
+.copy-right_useful_link{
+    & a{
+        color: $footer-text;
+        transition: .3s;
+        &:hover{
+            color: $theme-color;
+        }
+    }
+}
+.footer-social{
+    & a{
+        color: $footer-text;
+        margin-left: 5px;
+        font-size: 14px;
+        width: 40px;
+        height: 40px;
+        line-height:36px;
+        border: 2px solid  $footer-text;
+        display: inline-block;
+        text-align: center;
+        border-radius: 6px;
+        transition: .3s;
+        &:first-child{
+            margin-left: 0;
+        }
+        &:hover{
+            background: $theme-color;
+            color: $white;
+            border-color: $theme-color;
+        }
+    }
+}
+.footer-col-2{
+    @media #{$xs,$sm,$md} {
+        margin-left: 0;
+    }
+    margin-left: 20px;
+}

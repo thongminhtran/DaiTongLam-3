@@ -1,0 +1,49 @@
+/*----------------------------------------*/
+/*  05. Section-title CSS
+/*----------------------------------------*/
+
+.section-title{
+    position: relative;
+    & h6{
+        color: $theme-color;
+        letter-spacing: 2px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        position: relative;
+    }
+    & h2{
+        letter-spacing: -3px;
+        font-size: 70px;
+        position: relative;
+        @media #{$md,$sm}{
+            font-size: 50px;
+        }
+        @media #{$xs}{
+            font-size: 35px;
+            & br{display: none;}
+        }
+    }
+}
+.section-title-d h2{
+    font-family: $merri;
+    @media #{$lg} {
+        font-size: 60px;
+    }
+}
+.section-title-white{
+    & h2{
+        color: $white;
+    }
+}
+.section-title_two h2{
+    @media #{$lg}{
+        font-size: 45px;
+        & br{display: none;}
+    }
+    @media #{$xs}{
+        font-size: 35px;
+        & br{display: none;}
+    }
+    font-size: 50px;
+}

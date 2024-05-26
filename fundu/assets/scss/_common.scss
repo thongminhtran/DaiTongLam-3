@@ -1,0 +1,566 @@
+/*----------------------------------------*/
+/*  03. Common CSS
+/*----------------------------------------*/
+
+/* 1. Theme default css */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ body {
+	font-family: $opensans;
+	font-weight: 400;
+    font-style: normal;
+	color:$body-text-color;
+	font-size: 16px;
+}
+.img,img {
+	// max-width: 100%;
+	@include transition(.3s);
+}
+.f-left {
+	float: left
+}
+.f-right {
+	float: right
+}
+.text-right{
+	text-align: right;
+}
+.fix {
+	overflow: hidden
+}
+a,
+.button,button {
+	@include transition(.3s);
+}
+a:focus,
+.button:focus {
+	text-decoration: none;
+	outline: none;
+}
+a:focus
+{
+	text-decoration: none;
+}
+a:hover
+{
+	color: $theme-color;
+}
+a,
+button {
+	color: inherit;
+	outline: medium none;
+	text-decoration: none;
+}
+button:focus,input:focus,input:focus,textarea,textarea:focus{outline: 0}
+.uppercase {
+	text-transform: uppercase;
+}
+.capitalize {
+	text-transform: capitalize;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $poppins;
+	color: $heading-color;
+	margin-top: 0px;
+	font-weight: 600;
+	text-transform: normal;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	color: inherit;
+}
+h1 {
+	font-size: 40px;
+	font-weight: 500;
+}
+h2 {
+	font-size: 35px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul {
+	margin: 0px;
+	padding: 0px;
+}
+li {
+	list-style: none
+}
+p {
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 26px;
+	color: $pg-color;
+	margin-bottom: 15px;
+}
+input,select{
+	transition: .3s;
+}
+hr {
+	border-bottom: 1px solid $hr-border-color;
+	border-top: 0 none;
+	margin: 30px 0;
+	padding: 0;
+}
+label {
+	color: $black-soft;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 400;
+}
+*::-moz-selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+::-moz-selection {
+	background: $black;
+	color:$white;
+	text-shadow: none;
+}
+::selection {
+	background: $black;
+	color: $white;
+	text-shadow: none;
+}
+.w-img img{
+	width: 100%;
+}
+
+// .owl-carousel .owl-item img {
+// 	width: auto;
+// }
+/*--
+    - Input Placeholder
+-----------------------------------------*/
+*::-moz-placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+*::placeholder {
+	color: $black;
+	font-size: 14px;
+	opacity: 1;
+}
+
+
+/*--
+    - Common Classes
+-----------------------------------------*/
+.fix {
+    overflow:hidden
+}
+.clear{
+    clear: both;
+}
+
+
+/*--
+    - Background color
+-----------------------------------------*/
+.grey-bg {
+	background: $grey;
+}
+.white-bg {
+	background:$white;
+}
+.black-bg {
+	background: $dark;
+}
+.theme-bg {
+	background: $theme-color;
+}
+.light-bg {
+	background: $lw-color;
+}
+.white-light-bg{
+	background: $white-light;
+}
+.s-gray-bg{
+	background: $s-gray;
+}
+.slight-bg{
+	background: #f9f8ff;
+}
+/*--
+    - color
+-----------------------------------------*/
+.white-color {
+	color: $white;
+}
+.black-color {
+	color: $black;
+}
+.theme-color {
+	color: $theme-color;
+}
+
+/*--
+    - Margin & Padding
+-----------------------------------------*/
+/*-- Margin Top --*/
+@for $i from 1 through 40 {
+    .mt-#{5 * $i}{margin-top: 5px * $i;}
+}
+/*-- Margin Bottom --*/
+@for $i from 1 through 40 {
+    .mb-#{5 * $i}{margin-bottom: 5px *$i;}
+}
+/*-- Margin Left --*/
+@for $i from 1 through 40 {
+    .ml-#{5 * $i}{margin-left: 5px * $i;}
+}
+
+/*-- Margin Right --*/
+@for $i from 1 through 40 {
+    .mr-#{5 * $i}{margin-right: 5px *$i;}
+}
+
+/*-- Padding Top --*/
+@for $i from 1 through 40 {
+    .pt-#{5 * $i}{padding-top: 5px *$i;}
+}
+
+/*-- Padding Bottom --*/
+@for $i from 1 through 40 {
+    .pb-#{5 * $i}{padding-bottom: 5px *$i;}
+}
+
+/*-- Padding Left --*/
+@for $i from 1 through 40 {
+    .pl-#{5 * $i}{padding-left: 5px *$i;}
+}
+
+/*-- Padding Right --*/
+@for $i from 1 through 40 {
+    .pr-#{5 * $i}{padding-right: 5px *$i;}
+}
+
+
+// others common css here :)
+
+.tp-btn-active{
+	background: $theme-color;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 40px;
+	line-height: 1;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: 2px solid transparent;
+	letter-spacing: 2px;
+	transition: .3s;
+	&:hover{
+		color: $white;
+	}
+}
+
+.tp-btn-border{
+	background: $white;
+	color: $pg-color;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 25px;
+	line-height: 1;
+	font-size: 14px;
+	text-transform: uppercase;
+	border-radius: 50px;
+	border: 1px solid $hr-border-color;
+	letter-spacing: 2px;
+	transition: .3s;
+	&:hover{
+		background: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+}
+
+// btn
+.s-btn {
+	background: $theme-color;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 40px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+    &:hover{
+        background: $heading-color;
+        color: $white;
+    }
+}
+
+.s-btn-d:hover{
+    @media #{$md} {
+        background: $white;
+        color: $theme-color;
+    }
+}
+
+.btn-border {
+	background: transparent;
+	color: $heading-color;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 40px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 1px solid #d0d6d9;
+    letter-spacing: 2px;
+    &:hover{
+        background: $theme-color;
+        color: #fff;
+        border-color: $theme-color;
+    }
+}
+
+.btn-border-2 {
+	background: transparent;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 40px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 1px solid #d0d6d9;
+    letter-spacing: 2px;
+    &:hover{
+        background: $theme-color;
+        color: #fff;
+        border-color: $theme-color;
+    }
+}
+
+.btn-border-d {
+	background: transparent;
+	color: #d0d6d9;
+	font-weight: 700;
+	display: inline-block;
+	padding: 18px 40px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid #d0d6d9;
+    letter-spacing: 2px;
+    &:hover{
+        background: $theme-color;
+        color: #fff;
+        border-color: $theme-color;
+    }
+}
+
+.btn-lg {
+    @media #{$xs} {
+        padding: 20px 55px;
+    }
+	background: $theme-color;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+    padding: 20px 74px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+    &:hover{
+        background: $white;
+        color: $theme-color;
+    }
+}
+
+.btn-sm {
+    @media #{$lg} {
+        padding: 25px 35px;
+    }
+    @media #{$xs} {
+        padding: 25px 30px;
+    }
+	background: $theme-color;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+    padding: 26px 68px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+    &:hover{
+        background: $heading-color;
+        color: $white;
+    }
+}
+
+.btn-sm-2 {
+    @media #{$lg} {
+        padding: 22px 35px;
+    }
+    @media #{$xs} {
+        padding: 22px 30px;
+    }
+	background: $theme-color;
+	color: $white;
+	font-weight: 700;
+	display: inline-block;
+    padding: 22px 68px;
+	line-height: 1;
+	font-size: 13px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    letter-spacing: 2px;
+    &:hover{
+        background: $heading-color;
+        color: $white;
+    }
+}
+
+.btn-sm-white{
+    @media #{$lg} {
+        padding: 22px 35px;
+    }
+    @media #{$xs} {
+        padding: 22px 30px;
+    }
+	background: none;
+	color: #f8f8f8;
+	font-weight: 700;
+	display: inline-block;
+    padding: 22px 68px;
+	line-height: 1;
+	font-size: 14px;
+	text-transform: uppercase;
+    border-radius: 50px;
+    border: 2px solid #e8e8e8;
+    &:hover{
+        background: $heading-color;
+        color: $white;
+    }
+}
+
+.sb-btn {
+    width: 200px;
+    height: 60px;
+    background: $theme-color;
+    border: 1px solid $theme-color;
+    text-align: center;
+    line-height: 60px;
+    color: $white;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 700;
+    transition: .3s;
+	display: inline-block;
+    & i{
+        margin-right: 10px;
+    }
+    &:hover{
+        background: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+}
+
+.sp-btn {
+	@media #{$xs} {
+		padding: 0 15px;
+		font-size: 14px;
+	}
+    padding: 0 70px;
+    height: 60px;
+    background: $theme-color;
+    border: 1px solid $theme-color;
+    text-align: center;
+    line-height: 60px;
+    color: $white;
+    text-transform: capitalize;
+    font-size: 16px;
+    margin-top: 10px;
+    font-weight: 700;
+    transition: .3s;
+	display: inline-block;
+	font-family: $poppins;
+    & i{
+        margin-right: 10px;
+    }
+    &:hover{
+        background: $white;
+        color: $theme-color;
+        border-color: $theme-color;
+    }
+}
+
+.live-btn{
+	@media only screen and (min-width: 320px) and (max-width: 385px) {
+		font-size: 12px;
+	}
+	background: #00d4af;
+	color: $white;
+	height: 40px;
+	padding: 0 15px;
+	line-height: 40px;
+	display: inline-block;
+	border-radius: 30px;
+	& i{
+		margin-right: 10px;
+	}
+}
+
+.donar-btn{
+	@media #{$xs} {
+		padding: 0 20px;
+	}
+	border: 1px solid #f2edff;
+	color: $white;
+	height: 50px;
+	padding: 0 50px;
+	line-height: 47px;
+	display: inline-block;
+	border-radius: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #cbcbd8;
+	display: inline-block;
+	background: $white;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	&:hover{
+		background: $theme-color;
+		color: $white;
+		border-color: $theme-color;
+	}
+}

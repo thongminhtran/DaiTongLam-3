@@ -1,0 +1,114 @@
+/*----------------------------------------*/
+/*  11. Features CSS
+/*----------------------------------------*/
+
+.features {
+    &__icon{
+        @media #{$xs} {
+            float: none;
+            margin-bottom: 20px;
+        }
+        margin-right: 25px;
+    }
+    &__content{
+        & h3{
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        & p{
+            margin-bottom: 15px;
+            padding-right: 12px;
+        }
+        & a{
+            font-size: 16px;
+            color: $link;
+            font-weight: 700;
+            transition: .3s;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+    }
+}
+.news-item{
+    position: relative;
+    overflow: hidden;
+}
+.news-item:hover .news_icon{
+    @media #{$lg} {
+        top: 15%;
+    }
+    @media #{$xs} {
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    visibility: visible;
+    opacity: 1;
+    top: 25%;
+}
+.news-info{
+    & h4{
+        font-size: 30px;
+        line-height: 1.2;
+        max-width: 700px;
+        font-family: $merri;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+}
+
+.news-image{
+    position: relative;
+    &::before{
+        position: absolute;
+        content: '';
+        height: 100%;
+        width: 100%;
+        background: #00000054;
+        top: 0;
+    }
+}
+
+.news_icon{
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    & a{
+        height: 50px;
+        width: 50px;
+        background: $theme-color;
+        line-height: 50px;
+        border-radius: 50%;
+        font-size: 15px;
+        color: $white;
+        display: inline-block;
+        text-align: center;
+        &:hover{
+            background: $white;
+            color: $theme-color;
+        }
+    }
+}
+
+.news-content{
+    position: absolute;
+    bottom: 10px;
+    & h5{
+        font-size: 26px;
+        color: $white;
+        font-weight: 600;
+        font-family: $merri;
+    }
+    & p{
+        color: $white;
+        @media #{$xs} {
+            padding: 0 15px;
+        }
+    }
+}

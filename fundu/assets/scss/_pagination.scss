@@ -1,0 +1,23 @@
+/*----------------------------------------*/
+/*  16. Pagination CSS
+/*----------------------------------------*/
+
+.fundo-pagination {
+    & a {
+        height: 40px;
+        width: 40px;
+        border: 2px solid #eaebec;
+        display: inline-block;
+        border-radius: 50%;
+        line-height: 37px;
+        font-weight: 700;
+        color: #b7bdc5;
+        margin: 0 5px;
+        background: $white;
+        &:hover{
+            background: $theme-color;
+            border-color: $theme-color;
+            color: $white;
+        }
+    }
+}

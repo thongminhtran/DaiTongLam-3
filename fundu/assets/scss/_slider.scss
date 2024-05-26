@@ -1,0 +1,347 @@
+/*----------------------------------------*/
+/*  07. Slider CSS
+/*----------------------------------------*/
+
+.single-slider{
+    min-height: 1020px;
+    @media #{$laptop}{
+        min-height: 900px;
+    }
+    @media #{$lg}{
+        min-height: 800px;
+    }
+    @media #{$md,$sm,$xs}{
+        min-height: 650px;
+    }
+}
+.flider{
+    @media #{$md}{
+        margin-bottom: 125px;
+    }
+    @media #{$xs,$sm}{
+        margin-bottom: 125px;
+    }
+    & span{
+        color: $theme-color;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: block;
+        & i{
+            margin-right: 10px;
+        }
+    }
+    & h2{
+        font-size: 74px;
+        @media #{$lg}{
+            font-size: 55px;
+        }
+        @media #{$md}{
+            font-size: 45px;
+        }
+        @media #{$sm,$xs}{
+            font-size: 35px;
+        }
+    }
+    &__btn{
+        @media #{$sm,$xs,} {
+            display: inline-block;
+        }
+        display: flex;
+    }
+}
+.flider-2{
+    @media #{$md}{
+        margin-bottom: 125px;
+    }
+    @media #{$md}{
+        margin-bottom: 50px;
+    }
+    @media #{$xs,$sm}{
+        margin-bottom: 125px;
+        margin-top: 200px;
+    }
+    margin-top: 150px;
+    & span{
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: block;
+        letter-spacing: 2px;
+        font-family: $poppins;
+        text-transform: uppercase;
+        & i{
+            margin-right: 10px;
+        }
+    }
+    & h2{
+        @media #{$lg}{
+            font-size: 55px;
+        }
+        @media #{$md}{
+            font-size: 45px;
+        }
+        @media #{$sm,$xs}{
+            font-size: 35px;
+        }
+        font-size: 74px;
+        color: $white;
+        & br{
+            @media #{$xs}{
+                display: none;
+            }
+        }
+    }
+    &__btn{
+        @media #{$sm,$xs,} {
+            display: inline-block;
+        }
+        display: flex;
+    }
+    .home-arrow {
+        position: absolute;
+        left: 21%;
+        bottom: 50px;
+        text-align: left;
+    }
+}
+.flider-3{
+    // margin-top: 140px;
+    & span{
+        color: $white;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: block;
+        letter-spacing: 2px;
+        font-family: $poppins;
+        text-transform: uppercase;
+        & i{
+            margin-right: 10px;
+        }
+    }
+    & h2{
+        @media #{$lg}{
+            font-size: 55px;
+        }
+        @media #{$md}{
+            font-size: 45px;
+        }
+        @media #{$sm,$xs}{
+            font-size: 35px;
+        }
+        font-size: 74px;
+        color: $white;
+        & br{
+            @media #{$xs}{
+                display: none;
+            }
+        }
+    }
+    &__btn{
+        @media #{$sm,$xs,} {
+            display: inline-block;
+        }
+        display: flex;
+    }
+    .home-arrow {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 50px;
+    }
+}
+.single-slider{
+    position: relative;
+    &::before{
+        position: absolute;
+        background: $theme-color;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    }
+}
+.home-arrow{
+    position: absolute;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: 50px;
+    & a{
+        font-size: 30px;
+        color: $theme-color;
+        & i{
+            animation: updown 1s infinite alternate;
+        }
+    }
+}
+.slider-area_2{
+    @media #{$lg} {
+        height: 900px;
+    }
+    @media #{$md,$sm} {
+        height: 600px;
+    }
+    @media #{$xs} {
+        height: 650px;
+    }
+    height: 1020px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.slider-area_3{
+    @media #{$lg} {
+        height: 900px;
+    }
+    @media #{$md,$sm} {
+        height: 600px;
+    }
+    @media #{$xs} {
+        height: 500px;
+    }
+    height: 1020px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.slider-area_4{
+    @media #{$lg} {
+        height: 700px;
+    }
+    @media #{$md,$sm} {
+        height: 600px;
+    }
+    @media #{$xs} {
+        height: 500px;
+    }
+    height: 875px;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+.slider-img {
+    & img {
+        max-width: inherit;
+        @media #{$laptop}{
+            max-width: 100%;
+        }
+        @media #{$lg}{
+            max-width: 100%;
+        }
+    }
+}
+.slider__overlay::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 3, 32, 0.66);
+    z-index: -1;
+}
+.slider__overlay-2::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 3, 32, 0.28);
+    z-index: -1;
+}
+.slider__overlay-3::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 3, 32, 0.43);
+    z-index: -1;
+}
+.top-video_icon{
+    & a{
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        color: $white;
+        background: $theme-color;
+        display: inline-block;
+        border-radius: 50%;
+        transition: .3s;
+        &:hover{
+            background: $white;
+            color: $theme-color;
+        }
+    }
+}
+.slider_content{
+    @media #{$md,$sm} {
+        margin-top: 110px;
+    }
+    @media #{$xs} {
+        margin-top: 110px;
+    }
+}
+.banner_title-3{
+    @media #{$md} {
+        font-size: 55px;
+    }
+    @media #{$sm} {
+        font-size: 52px;
+    }
+    @media #{$xs} {
+        font-size: 45px;
+        & br {
+            display: none;
+        }
+    }
+    color: $white;
+    font-size: 80px;
+    line-height: 1.2;
+    font-family: $merri;
+}
+.home-arrow-3{
+    @media #{$xs} {
+        display: none;
+    }
+    & a{
+        color: $white;
+        transition: .3s;
+        &:hover{
+            color: $theme-color;
+        }
+    }
+}
+.slider_content-3{
+    margin-top: 140px;
+    margin-bottom: 45px;
+}
+
+
+
+
+
+/* css animation - start
+================================================== */
+@keyframes updown {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}

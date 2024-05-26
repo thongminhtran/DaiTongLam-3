@@ -1,0 +1,70 @@
+/*----------------------------------------*/
+/*  15. Page-title CSS
+/*----------------------------------------*/
+
+.page-ttle-area {
+    @media #{$sm} {
+        padding-top: 245px;
+        padding-bottom: 160px;
+    }
+    @media #{$xs} {
+        padding-top: 235px;
+        padding-bottom: 150px;
+    }
+	padding-top: 350px;
+	padding-bottom: 170px;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.page-title {
+    & h2 {
+        @media #{$md} {
+            font-size: 60px;
+        }
+        @media #{$xs,$sm} {
+            font-size: 50px;
+        }
+        font-family: $merri;
+        color: $white;
+        font-size: 75px;
+    }
+}
+.breadcrumb-menu {
+    & ul {
+        & li {
+            display: inline-block;
+            padding: 0 10px;
+            position: relative;
+            &::before{
+                content: "";
+                background: #a7a3b2;
+                height: 23px;
+                width: 2px;
+                position: absolute;
+                left: -1px;
+                top: 3px;
+            }
+            &:first-child {
+                &::before{
+                    display: none;
+                }
+            }
+            & a {
+                color: #a7a3b2;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            & span{
+                color: $theme-color;
+                text-transform: uppercase;
+                font-weight: 600;
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+        }
+    }
+}

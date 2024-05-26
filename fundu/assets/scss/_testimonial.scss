@@ -1,0 +1,194 @@
+/*----------------------------------------*/
+/*  12. Testimonial CSS
+/*----------------------------------------*/
+
+.testimonial-area{
+    position: relative;
+    z-index: 1;
+}
+
+.quote-shape{
+    position: absolute;
+    top: 8%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: -1;
+}
+.quote-shape img {
+    @media #{$xs} {
+        width: 200px;
+    }
+}
+.testimonial{
+    & img{
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+    & p{
+        @media #{$xs} {
+            padding: 0 0;
+        }
+        font-size: 26px;
+        line-height: 1.3;
+        padding: 0 50px;
+        margin-bottom: 45px;
+    }
+    & h3{
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+    & span{
+        letter-spacing: 2px;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $theme-color;
+    }
+}
+.test-thumb{
+    & img{
+        display: inline-block;
+        transform: scale(.8);
+        transition: .3s;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
+        border-radius: 100px;
+        &.slick-center{
+           transform: scale(1);
+        }
+    }
+}
+
+.test-nav-width {
+	width: 290px;
+    margin: auto;
+    & .slick-track {
+        padding-bottom: 30px;
+    }
+}
+
+.testimonial-sm_info{
+    padding: 34px 40px;
+    border: 2px solid $sp-border-color;
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -8px;
+        left: 70px;
+        box-sizing: border-box;
+        border-color: transparent #fff #fff transparent;
+        border-style: solid;
+        border-width: 10px;
+        transform: rotate(40deg);
+        box-shadow: 2px 2px 2px -1px rgba(60, 72, 88, 0.40);
+    }
+    & .rating{
+        & a{
+            font-size: 20px;
+            color: #ffae00;
+            margin-right: 5px;
+        }
+    }
+    & p{
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+}
+
+.testimonial_sm-author{
+    display: flex;
+    align-items: center;
+    margin-left: 45px;
+    & img{
+        margin-right: 20px;
+        width: auto !important;
+    }
+    & h5{
+        font-size: 18px;
+    }
+    & span{
+        text-transform: uppercase;
+        color: $theme-color;
+        letter-spacing: 2px;
+        font-weight: 700;
+        font-size: 12px;
+        display: block;
+    }
+}
+
+.faq{
+    &__content{
+
+        & .accordion-item{
+            border: 2px solid $sp-border-color;
+            margin-bottom: 20px;
+            border-radius: 6px;
+        }
+
+        & .accordion-item:first-of-type .accordion-button {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        & .accordion-button:focus {
+            box-shadow: none;
+        }
+        & .accordion-button:not(.collapsed) {
+            color: $black;
+            background-color: #fff;
+            &::after{
+                content: '\f068';
+                @include transform(rotate(0));
+            }
+        }
+        & .accordion-button {
+            @media #{$xl}{
+                padding-right: 30px;
+            }
+            @media #{$xs}{
+                padding-right: 35px;
+                padding: 20px  10px;
+                font-size: 16px;
+            }
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 20px 30px;
+            font-size: 20px;
+            font-weight: 400;
+            color: $pg-color;
+            background-color: $white;
+            border: none;
+            border-radius: 0;
+            font-family: $opensans;
+            &:hover{
+                color: $heading-color;
+            }
+            &::after{
+                @media #{$xs}{
+                    right: 15px;
+                }
+                background-image: none;
+                content: '\f067';
+                right: 30px;
+                font-size: 18px;
+                color: $theme-color;
+                font-family: "Font Awesome 5 Pro";
+                position: absolute;
+                margin: 0;
+                font-size: 15px;
+            }
+        }
+        & .accordion-body{
+            border: none;
+            padding: 0 30px;
+            @media #{$xs}{
+                padding: 0 10px;
+            }
+        }
+        & .accordion-collapse{
+            border: none;
+        }
+    }
+}
